@@ -4,6 +4,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 import { AppResolver } from './app.resolver';
 import { CloudinaryService } from './cloudinary.service';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -13,6 +14,6 @@ import { CloudinaryService } from './cloudinary.service';
     }),
   ],
   controllers: [],
-  providers: [AppResolver,CloudinaryService],
+  providers: [AppResolver,AppService,CloudinaryService],
 })
 export class AppModule { }
